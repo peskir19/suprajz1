@@ -204,7 +204,8 @@ h1 {
 .sticker16 {
     bottom: 14%;
     left: 58%;
-    width: 80px;
+    width: 150px;
+    height: auto;
     transform: rotate(-8deg);
 }
 .daily-section {
@@ -301,164 +302,22 @@ h1 {
         font-size: 11px;
     }
 
-    .sticker {
-        width: 50px;
-    }
+   /* ---------- ALL MOBILE STICKERS ---------- */
 
+.sticker {
+    /* reset desktop positioning */
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
 
-    /* TOP */
-
-    .sticker1 {
-        top: 40px;
-        left: 25px;
-        width: 58px;
-        transform: rotate(7deg);
-    }
-
-    .sticker2 {
-        top: 55px;
-        left: 145px;
-        width: 45px;
-        transform: rotate(-5deg);
-    }
-
-    .sticker3 {
-        top: 35px;
-        right: 25px;
-        width: 50px;
-        transform: rotate(-7deg);
-    }
-
-    .sticker4 {
-        top: 130px;
-        left: 55px;
-        width: 45px;
-        transform: rotate(6deg);
-    }
-
-    .sticker5 {
-        top: 120px;
-        right: 60px;
-        width: 48px;
-        transform: rotate(-5deg);
-    }
-
-
-    /* SIDES OF COUNTDOWN */
-
-    .sticker6 {
-        top: 290px;
-        left: 15px;
-        width: 45px;
-        transform: rotate(-6deg);
-    }
-
-    .sticker7 {
-        top: 300px;
-        right: 15px;
-        width: 42px;
-        transform: rotate(6deg);
-    }
-
-
-    /* BELOW COUNTDOWN */
-
-    .sticker8 {
-        bottom: 300px;
-        left: 35px;
-        width: 52px;
-        transform: rotate(7deg);
-    }
-
-    .sticker9 {
-        top: 50%;
-        bottom: 120px;
-        left: 160px;
-        width: 43px;
-        transform: rotate(-5deg);
-    }
-
-    .sticker10 {
-        bottom: 110px;
-        right: 35px;
-        width: 50px;
-        transform: rotate(-8deg);
-    }
-
-
-    /* Don't show every decoration on a phone */
-    .sticker11,
-    .sticker12,
-    .sticker13,
-    .sticker14,
-    .sticker15,
-    .sticker16 {
-        display: none;
-    }
-
-
-    /* SECOND SECTION */
-
-    .daily-section {
-        width: 100%;
-        min-height: 100vh;
-        box-sizing: border-box;
-        padding: 30px 20px;
-    }
-
-    .daily-card {
-        width: calc(100% - 40px);
-        max-width: 380px;
-        box-sizing: border-box;
-        padding: 30px 20px;
-    }
-
-    .daily-section h2 {
-        font-size: 32px;
-    }
-
-    .daily-card p {
-        font-size: 21px;
-    }
-}
-html,
-body {
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+    display: block;
+    width: 50px;
 }
 
-@media (max-width: 600px) {
 
-    .scene {
-        position: relative;
-        width: 100%;
-        max-width: 100%;
-        min-height: 100vh;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
+/* ===== ABOVE COUNTDOWN ===== */
 
-    .daily-section {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-    @media (max-width: 600px) {
-
-    .card {
-        position: relative;
-        z-index: 10;
-    }
-
-    .sticker {
-        width: 48px;
-        z-index: 2;
-    }
-
-   /* RAT - top left */
 .sticker1 {
     top: 25px;
     left: 25px;
@@ -466,15 +325,13 @@ body {
     transform: rotate(6deg);
 }
 
-/* COUPLE - upper middle */
 .sticker2 {
     top: 65px;
-    left: 43%;
+    left: 145px;
     width: 55px;
-    transform: translateX(-50%) rotate(-5deg);
+    transform: rotate(-5deg);
 }
 
-/* COUPLE - top right */
 .sticker3 {
     top: 30px;
     right: 25px;
@@ -482,72 +339,102 @@ body {
     transform: rotate(-7deg);
 }
 
-/* MONKEY - left */
 .sticker4 {
-    top: 150px;
+    top: 145px;
     left: 35px;
-    width: 55px;
+    width: 58px;
     transform: rotate(7deg);
 }
 
-/* COUPLE - right */
 .sticker5 {
-    top: 145px;
+    top: 140px;
     right: 35px;
-    width: 55px;
+    width: 58px;
     transform: rotate(-6deg);
 }
 
-/* TURTLE - above countdown, center */
 .sticker6 {
-    top: 150px;
+    top: 168px;
     left: 50%;
-    width: 45px;
+    width: 48px;
     transform: translateX(-50%) rotate(3deg);
 }
 
-/* FLOWER - BELOW countdown, left */
 .sticker7 {
-    bottom: 105px;
-    left: 5px;
-    width: 45px;
-    transform: rotate(-6deg);
-}
-
-/* STAR - bottom-left-ish */
-.sticker8 {
-    bottom: 35px;
-    left: 130px;
+    top: 90px;
+    left: 65%;
     width: 45px;
     transform: rotate(5deg);
 }
 
-/* BOW - between the upper photos */
-.sticker9 {
-    top: 500px;
-    left: 50%;
-    width: 42px;
-    transform: translateX(-50%) rotate(-4deg);
+.sticker8 {
+    top: 175px;
+    left: 80px;
+    width: 45px;
+    transform: rotate(-5deg);
 }
 
-/* HEART - bottom right */
+
+/* ===== BELOW COUNTDOWN ===== */
+
+.sticker9 {
+    bottom: 225px;
+    left: 5px;
+    width: 50px;
+    transform: rotate(-6deg);
+}
+
 .sticker10 {
-    bottom: 75px;
-    right: 45px;
-    width: 48px;
+    bottom: 215px;
+    right: 5px;
+    width: 55px;
     transform: rotate(6deg);
 }
 
-.sticker11,
-.sticker12,
-.sticker13,
-.sticker14,
-.sticker15,
+.sticker11 {
+    bottom: 100px;
+    left: 150px;
+    width: 48px;
+    transform: rotate(5deg);
+}
+
+.sticker12 {
+    bottom: 110px;
+    right: 95px;
+    width: 52px;
+    transform: rotate(-6deg);
+}
+
+.sticker13 {
+    bottom: 95px;
+    left: 30px;
+    width: 52px;
+    transform: rotate(-7deg);
+}
+
+.sticker14 {
+    bottom: 85px;
+    right: 35px;
+    width: 55px;
+    transform: rotate(7deg);
+}
+
+.sticker15 {
+    bottom: 25px;
+    left: 100px;
+    width: 50px;
+    transform: rotate(5deg);
+}
+
 .sticker16 {
-    display: none;
+    bottom: 20px;
+    right: 50px;
+    width: 100px;
+    height: auto;
+    transform: rotate(-5deg);
 }
 }
-}
+
     .music-section {
     text-align: center;
     margin-top: 30px;
