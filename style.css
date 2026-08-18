@@ -309,7 +309,7 @@ h1 {
     /* TOP */
 
     .sticker1 {
-        top: 30px;
+        top: 40px;
         left: 25px;
         width: 58px;
         transform: rotate(7deg);
@@ -364,15 +364,16 @@ h1 {
     /* BELOW COUNTDOWN */
 
     .sticker8 {
-        bottom: 135px;
+        bottom: 300px;
         left: 35px;
         width: 52px;
         transform: rotate(7deg);
     }
 
     .sticker9 {
-        bottom: 75px;
-        left: 135px;
+        top: 50%;
+        bottom: 120px;
+        left: 160px;
         width: 43px;
         transform: rotate(-5deg);
     }
@@ -523,7 +524,7 @@ body {
 
 /* BOW - between the upper photos */
 .sticker9 {
-    top: 450px;
+    top: 500px;
     left: 50%;
     width: 42px;
     transform: translateX(-50%) rotate(-4deg);
