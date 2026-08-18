@@ -32,7 +32,7 @@ updateCountdown();
 
 setInterval(updateCountdown, 1000);
 const messages = [
-    "Veoma simple samo volimo te ❤️",
+    "Veoma simple samo volim te ❤️",
     "Volim te kao što Joffrey voli da bude idiot ❤️",
     "Volim te kao što volim kokice ❤️",
     "Volim te skoro koliko i ti sir (nije moguce toliko) ❤️",
