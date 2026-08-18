@@ -32,17 +32,17 @@ updateCountdown();
 
 setInterval(updateCountdown, 1000);
 const messages = [
-    "Message 1 ❤️",
-    "Message 2 ❤️",
-    "Message 3 ❤️",
-    "Message 4 ❤️",
-    "Message 5 ❤️",
-    "Message 6 ❤️",
-    "Message 7 ❤️",
-    "Message 8 ❤️",
-    "Message 9 ❤️",
-    "Message 10 ❤️",
-    "Message 11 ❤️"
+    "Veoma simple samo volimo te ❤️",
+    "Volim te kao što Joffrey voli da bude idiot ❤️",
+    "Volim te kao što volim kokice ❤️",
+    "Volim te skoro koliko i ti sir (nije moguce toliko) ❤️",
+    "Volim te onoliko koliko ti mrziš da se budiš ujutru ❤️",
+    "Volim te onoliko koliko mrzim onog malog iz noći u muzeju ❤️",
+    "Volim te i nadam se da ću imati priliku da te volim duuuuuugo ❤️",
+    "Volim te onoliko koliko ti mrziš nizozemce 🤮 ❤️",
+    "Volim te kao što volim kad se smijes na moje glupe fore ❤️",
+    "Volim te kao što mi volimo lite poljubac ❤️",
+    "Volim te najviše na svijetu ❤️"
 ];
 
 const firstMessageDate = new Date(2026, 7, 18);
@@ -104,21 +104,20 @@ musicButton.addEventListener("click", function () {
     }
 
 });
-/* =========================================
-   STICK FIGURE LOVE ANIMATION
-   ========================================= */
+const personLeft =
+    document.getElementById("person-left");
 
-const personLeft = document.getElementById("person-left");
-const personRight = document.getElementById("person-right");
-const animationHeart = document.getElementById("animation-heart");
+const personRight =
+    document.getElementById("person-right");
+
+const animationHeart =
+    document.getElementById("animation-heart");
 
 
 function wait(milliseconds) {
-
-    return new Promise(resolve => {
-        setTimeout(resolve, milliseconds);
-    });
-
+    return new Promise(resolve =>
+        setTimeout(resolve, milliseconds)
+    );
 }
 
 
@@ -126,83 +125,59 @@ async function playLoveAnimation() {
 
     while (true) {
 
-        /* -----------------------------
-           1. START WALKING
-           ----------------------------- */
+        /* START WALKING */
 
         personLeft.classList.add("walking");
         personRight.classList.add("walking");
 
 
-        /* Desktop positions */
+        if (window.innerWidth <= 600) {
 
-        if (window.innerWidth > 600) {
+            personLeft.style.left = "115px";
+            personRight.style.left = "185px";
+
+        } else {
 
             personLeft.style.left = "190px";
             personRight.style.left = "260px";
 
         }
 
-        /* Phone positions */
-
-        else {
-
-            personLeft.style.left = "115px";
-            personRight.style.left = "185px";
-
-        }
-
-
-        /* Takes 2 seconds to walk */
 
         await wait(2000);
 
 
 
-        /* -----------------------------
-           2. STOP WALKING
-           ----------------------------- */
+        /* STOP WALKING */
 
         personLeft.classList.remove("walking");
         personRight.classList.remove("walking");
 
 
-        /* They stand there for one second */
+        /* stand there for a second */
 
         await wait(1000);
 
 
 
-        /* -----------------------------
-           3. HOLD HANDS
-           ----------------------------- */
+        /* HOLD HANDS */
 
         personLeft.classList.add("holding");
         personRight.classList.add("holding");
-
-
-        /* Give arms time to move together */
 
         await wait(700);
 
 
 
-        /* -----------------------------
-           4. HEART APPEARS
-           ----------------------------- */
+        /* HEART APPEARS */
 
         animationHeart.classList.add("show");
-
-
-        /* Stay together for 3 seconds */
 
         await wait(3000);
 
 
 
-        /* -----------------------------
-           5. HEART DISAPPEARS
-           ----------------------------- */
+        /* HEART DISAPPEARS */
 
         animationHeart.classList.remove("show");
 
@@ -210,61 +185,48 @@ async function playLoveAnimation() {
 
 
 
-        /* -----------------------------
-           6. LET GO
-           ----------------------------- */
+        /* LET GO */
 
         personLeft.classList.remove("holding");
         personRight.classList.remove("holding");
 
-        await wait(500);
+        await wait(400);
 
 
 
-        /* -----------------------------
-           7. RESET
-           ----------------------------- */
+        /* RESET WITHOUT ANIMATION */
 
         personLeft.style.transition = "none";
         personRight.style.transition = "none";
 
 
-        if (window.innerWidth > 600) {
+        if (window.innerWidth <= 600) {
+
+            personLeft.style.left = "10px";
+            personRight.style.left = "290px";
+
+        } else {
 
             personLeft.style.left = "20px";
             personRight.style.left = "430px";
 
         }
 
-        else {
-
-            personLeft.style.left = "10px";
-            personRight.style.left = "290px";
-
-        }
-
-
-        /*
-        Give the browser a moment to move them back
-        without showing the movement.
-        */
 
         await wait(100);
 
 
-        /* Turn movement animation back on */
+        /* restore walking movement */
 
         personLeft.style.transition = "left 2s ease";
         personRight.style.transition = "left 2s ease";
 
 
-        /* Wait before starting again */
-
-        await wait(1200);
-
+        await wait(1000);
     }
-
 }
 
+
+playLoveAnimation();
 
 playLoveAnimation();
