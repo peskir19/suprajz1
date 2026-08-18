@@ -97,10 +97,10 @@ musicButton.addEventListener("click", function () {
 
     if (music.paused) {
         music.play();
-        musicButton.textContent = "⏸ Pause our song";
+        musicButton.textContent = "⏸ Pauziraj pjesmu";
     } else {
         music.pause();
-        musicButton.textContent = "▶ Play our song ♡";
+        musicButton.textContent = "▶ Nastavi ♡";
     }
 
 });
