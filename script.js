@@ -104,3 +104,167 @@ musicButton.addEventListener("click", function () {
     }
 
 });
+/* =========================================
+   STICK FIGURE LOVE ANIMATION
+   ========================================= */
+
+const personLeft = document.getElementById("person-left");
+const personRight = document.getElementById("person-right");
+const animationHeart = document.getElementById("animation-heart");
+
+
+function wait(milliseconds) {
+
+    return new Promise(resolve => {
+        setTimeout(resolve, milliseconds);
+    });
+
+}
+
+
+async function playLoveAnimation() {
+
+    while (true) {
+
+        /* -----------------------------
+           1. START WALKING
+           ----------------------------- */
+
+        personLeft.classList.add("walking");
+        personRight.classList.add("walking");
+
+
+        /* Desktop positions */
+
+        if (window.innerWidth > 600) {
+
+            personLeft.style.left = "190px";
+            personRight.style.left = "260px";
+
+        }
+
+        /* Phone positions */
+
+        else {
+
+            personLeft.style.left = "115px";
+            personRight.style.left = "185px";
+
+        }
+
+
+        /* Takes 2 seconds to walk */
+
+        await wait(2000);
+
+
+
+        /* -----------------------------
+           2. STOP WALKING
+           ----------------------------- */
+
+        personLeft.classList.remove("walking");
+        personRight.classList.remove("walking");
+
+
+        /* They stand there for one second */
+
+        await wait(1000);
+
+
+
+        /* -----------------------------
+           3. HOLD HANDS
+           ----------------------------- */
+
+        personLeft.classList.add("holding");
+        personRight.classList.add("holding");
+
+
+        /* Give arms time to move together */
+
+        await wait(700);
+
+
+
+        /* -----------------------------
+           4. HEART APPEARS
+           ----------------------------- */
+
+        animationHeart.classList.add("show");
+
+
+        /* Stay together for 3 seconds */
+
+        await wait(3000);
+
+
+
+        /* -----------------------------
+           5. HEART DISAPPEARS
+           ----------------------------- */
+
+        animationHeart.classList.remove("show");
+
+        await wait(500);
+
+
+
+        /* -----------------------------
+           6. LET GO
+           ----------------------------- */
+
+        personLeft.classList.remove("holding");
+        personRight.classList.remove("holding");
+
+        await wait(500);
+
+
+
+        /* -----------------------------
+           7. RESET
+           ----------------------------- */
+
+        personLeft.style.transition = "none";
+        personRight.style.transition = "none";
+
+
+        if (window.innerWidth > 600) {
+
+            personLeft.style.left = "20px";
+            personRight.style.left = "430px";
+
+        }
+
+        else {
+
+            personLeft.style.left = "10px";
+            personRight.style.left = "290px";
+
+        }
+
+
+        /*
+        Give the browser a moment to move them back
+        without showing the movement.
+        */
+
+        await wait(100);
+
+
+        /* Turn movement animation back on */
+
+        personLeft.style.transition = "left 2s ease";
+        personRight.style.transition = "left 2s ease";
+
+
+        /* Wait before starting again */
+
+        await wait(1200);
+
+    }
+
+}
+
+
+playLoveAnimation();
